@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white p-5">
+<div class="container border border-warning p-4 rounded">
+    <h1 class="text-warning">Espace Administration</h1>
+    <p>Bienvenue, Monsieur l'Admin (<span th:text="${#authentication.name}"></span>).</p>
+    <hr>
+    <p>Cette page n'est accessible que si tu as le rôle <strong>ROLE_ADMIN</strong>.</p>
+    <a th:href="@{/home}" class="btn btn-outline-light">Retour Accueil</a>
+</div>
+</body>
+</html>
